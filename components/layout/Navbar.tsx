@@ -92,7 +92,7 @@ export function Navbar({ logo, items }: NavbarProps) {
                   alt=""
                   width={280}
                   height={64}
-                  className="h-auto max-h-12 w-auto max-w-full object-contain"
+                  className="h-auto max-h-16 w-auto max-w-full object-contain"
                 />
               </div>
 
