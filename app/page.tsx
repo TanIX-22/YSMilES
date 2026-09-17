@@ -500,17 +500,7 @@ export default function HomePage() {
 
       </main>
 
-      <Footer
-        logo={
-          <Image
-            src={ilbsLogo}
-            alt="Institute of Liver and Biliary Sciences"
-            width={220}
-            height={86}
-            className="h-14 w-auto object-contain"
-          />
-        }
-      />
+      <Footer />
     </>
   );
 }
