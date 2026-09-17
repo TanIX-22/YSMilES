@@ -77,7 +77,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0d9488]">
-                Young - Stronger India
+                Young – Stronger India through Million Health Educated Students.
               </p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#0f2847] sm:text-4xl">
                 Health education that grows with every student
@@ -182,7 +182,7 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 title="About Y-SMilES"
-                subtitle="Young – Stronger India through a 1 Lakh Health Educated Students"
+                subtitle="Young – Stronger India through Million Health Educated Students."
               />
               <div className="space-y-5 text-lg text-neutral-600">
                 <p>

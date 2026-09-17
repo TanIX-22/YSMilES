@@ -57,7 +57,7 @@ export function Footer({ columns = defaultColumns, logo, className, ...props }: 
               )}
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
-              Young – Stronger India through a 1 Lakh Health Educated Students.
+              Young – Stronger India through Million Health Educated Students.
             </p>
           </div>
 
