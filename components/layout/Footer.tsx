@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/Container';
+import { withBasePath } from '@/lib/paths';
 
 interface FooterLink {
   label: string;
@@ -47,7 +48,7 @@ export function Footer({ columns = defaultColumns, logo, className, ...props }: 
             <Link href="/" className="inline-flex items-center gap-3" aria-label="Y-SMILES Home">
               {logo || (
                 <Image
-                  src="/logos/Ysmiles_logo.jpg"
+                  src={withBasePath('/logos/Ysmiles_logo.jpg')}
                   alt="Y-SMiLES logo"
                   width={112}
                   height={112}
@@ -68,12 +69,12 @@ export function Footer({ columns = defaultColumns, logo, className, ...props }: 
               <ul className="mt-4 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-sm text-slate-600 transition hover:text-[#003a91] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003a91]/20"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

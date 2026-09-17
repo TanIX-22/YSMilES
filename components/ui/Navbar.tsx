@@ -43,13 +43,13 @@ export function Navbar({
 
             <nav className="hidden lg:flex lg:gap-1" aria-label="Main">
               {items.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className="rounded-md px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 hover:text-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -60,7 +60,7 @@ export function Navbar({
               size="md"
               className="hidden sm:inline-flex"
             >
-              <a href={ctaHref}>{ctaLabel}</a>
+              <Link href={ctaHref}>{ctaLabel}</Link>
             </Button>
 
             <button
@@ -88,18 +88,18 @@ export function Navbar({
         <Container>
           <nav className="flex flex-col gap-1 py-4" aria-label="Mobile">
             {items.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="rounded-md px-3 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-50 hover:text-primary-700"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="mt-4 px-3">
               <Button asChild className="w-full">
-                <a href={ctaHref}>{ctaLabel}</a>
+                <Link href={ctaHref}>{ctaLabel}</Link>
               </Button>
             </div>
           </nav>

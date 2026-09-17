@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
+import { withBasePath } from '@/lib/paths';
 
 interface NavItem {
   label: string;
@@ -31,9 +32,9 @@ export function Navbar({ logo, items }: NavbarProps) {
               aria-label="Y-SMILES Home"
               className="absolute left-4 top-1/2 z-20 flex h-[104px] w-[104px] -translate-y-1/2 items-center justify-center overflow-hidden rounded-full border-[5px] border-[#003a91] bg-[#003a91] shadow-[0_20px_38px_rgba(0,58,145,0.22)] transition-transform duration-200 hover:scale-[1.02]"
             >
-              {logo || (
-                <Image
-                  src="/logos/Ysmiles_logo.jpg"
+                {logo || (
+                  <Image
+                    src={withBasePath('/logos/Ysmiles_logo.jpg')}
                   alt="Y-SMILES logo"
                   width={104}
                   height={104}
@@ -49,7 +50,7 @@ export function Navbar({ logo, items }: NavbarProps) {
                   const isHome = item.label === 'HOME';
 
                   return (
-                    <a
+                    <Link
                       key={item.href}
                       href={item.href}
                       className={cn(
@@ -59,7 +60,7 @@ export function Navbar({ logo, items }: NavbarProps) {
                       )}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   );
                 })}
               </nav>
@@ -73,9 +74,9 @@ export function Navbar({ logo, items }: NavbarProps) {
                 aria-label="Y-SMILES Home"
                 className="flex h-[68px] w-[68px] items-center justify-center overflow-hidden rounded-full border-[4px] border-[#003a91] bg-[#003a91] shadow-[0_10px_20px_rgba(0,58,145,0.22)]"
               >
-                {logo || (
-                  <Image
-                    src="/logos/Ysmiles_logo.jpg"
+                  {logo || (
+                    <Image
+                      src={withBasePath('/logos/Ysmiles_logo.jpg')}
                     alt="Y-SMILES logo"
                     width={68}
                     height={68}
@@ -87,7 +88,7 @@ export function Navbar({ logo, items }: NavbarProps) {
 
               <div className="flex min-w-0 flex-1 justify-center px-2" aria-hidden="true">
                 <Image
-                  src="/logos/ysmiles-wordmark.svg"
+                  src={withBasePath('/logos/ysmiles-wordmark.svg')}
                   alt=""
                   width={280}
                   height={64}
@@ -120,14 +121,14 @@ export function Navbar({ logo, items }: NavbarProps) {
         <Container>
           <nav className="rounded-[24px] border border-[#eaf0f6] bg-white p-2 shadow-[0_16px_30px_rgba(15,40,71,0.09)]" aria-label="Mobile navigation">
             {items.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="block rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-[#163b62] transition hover:bg-[#f3f8ff] hover:text-[#0f2847]"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </Container>

@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: process.env.GITHUB_ACTIONS ? '/YSMilES' : undefined,
+  basePath: '/YSMilES',
   trailingSlash: true,
   images: {
     unoptimized: true,

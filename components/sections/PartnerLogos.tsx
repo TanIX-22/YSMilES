@@ -1,5 +1,6 @@
 // components/sections/PartnerLogos.tsx
 import Image, { ImageProps } from 'next/image';
+import Link from 'next/link';
 import { HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/Container';
@@ -54,7 +55,7 @@ export function PartnerLogos({
               className={itemClassName}
             >
               {partner.href ? (
-                <a
+                <Link
                   href={partner.href}
                   className={linkClassName}
                   target="_blank"
@@ -70,7 +71,7 @@ export function PartnerLogos({
                       size === 'large' && partner.name === 'Y-SMILES' && 'h-32 w-64 sm:h-36 sm:w-72',
                     )}
                   />
-                </a>
+                </Link>
               ) : (
                 <div className={logoWrapperClassName}>
                   <Image

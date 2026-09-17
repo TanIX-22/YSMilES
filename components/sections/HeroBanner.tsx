@@ -6,6 +6,7 @@ import ilbsLogo from '@/logos/ILBS_logo.png';
 import launchImage from '@/images/gallery/launch.jpg';
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/Container';
+import { withBasePath } from '@/lib/paths';
 
 interface HeroBannerProps {
   title?: string;
@@ -49,7 +50,7 @@ export function HeroBanner({ title, subtitle, className }: HeroBannerProps) {
           className="absolute right-4 top-5 z-10 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003a91]/30 sm:right-6 sm:top-6"
           aria-label="NTPC"
         >
-          <Image src="/logos/NTPC_logo.png" alt="NTPC" width={180} height={70} className="h-12 w-auto object-contain mix-blend-multiply sm:h-14" priority />
+          <Image src={withBasePath('/logos/NTPC_logo.png')} alt="NTPC" width={180} height={70} className="h-12 w-auto object-contain mix-blend-multiply sm:h-14" priority />
         </a>
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-white/90">

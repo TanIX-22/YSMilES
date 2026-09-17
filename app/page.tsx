@@ -23,6 +23,7 @@ import { ImpactCard } from '@/components/ui/ImpactCard';
 import { RiskZoneCard } from '@/components/ui/RiskZoneCard';
 import { Timeline } from '@/components/ui/Timeline';
 import { Testimonial } from '@/components/ui/Testimonial';
+import { withBasePath } from '@/lib/paths';
 import {
   Users,
   School,
@@ -46,8 +47,8 @@ const navItems = [
 
 const partners = [
   { name: 'ILBS', logoUrl: ilbsLogo, href: 'https://www.ilbs.in' },
-  { name: 'NTPC', logoUrl: '/logos/NTPC_logo.png', href: 'https://www.ntpc.co.in' },
-  { name: 'Y-SMILES', logoUrl: '/logos/Ysmiles_logo.jpg', href: '/' },
+  { name: 'NTPC', logoUrl: withBasePath('/logos/NTPC_logo.png'), href: 'https://www.ntpc.co.in' },
+  { name: 'Y-SMILES', logoUrl: withBasePath('/logos/Ysmiles_logo.jpg'), href: '/' },
 ];
 
 export default function HomePage() {
@@ -67,7 +68,7 @@ export default function HomePage() {
           <div className="grid items-center gap-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
             <div className="flex justify-center lg:justify-start">
               <Image
-                src="/logos/Ysmiles_logo.jpg"
+                src={withBasePath('/logos/Ysmiles_logo.jpg')}
                 alt="Y-SMiLES logo"
                 width={720}
                 height={720}
