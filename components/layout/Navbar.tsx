@@ -68,7 +68,7 @@ export function Navbar({ logo, items }: NavbarProps) {
           </div>
 
           <div className="lg:hidden">
-            <div className="flex h-[84px] items-center justify-between gap-3 rounded-[28px] border border-[#dceef4] bg-white px-2 py-2 shadow-[0_14px_30px_rgba(0,58,145,0.08)]">
+            <div className="relative flex h-[84px] items-center justify-between gap-3 rounded-[28px] border border-[#dceef4] bg-white px-2 py-2 shadow-[0_14px_30px_rgba(0,58,145,0.08)]">
               <Link
                 href="/"
                 aria-label="Y-SMILES Home"
@@ -86,7 +86,7 @@ export function Navbar({ logo, items }: NavbarProps) {
                 )}
               </Link>
 
-              <div className="flex min-w-0 flex-1 justify-center px-2" aria-hidden="true">
+              <div className="pointer-events-none absolute left-1/2 flex max-w-[calc(100%-10rem)] -translate-x-1/2 justify-center px-2" aria-hidden="true">
                 <Image
                   src={withBasePath('/logos/ysmiles-wordmark.svg')}
                   alt=""
