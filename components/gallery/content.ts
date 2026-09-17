@@ -111,7 +111,7 @@ export const albums: GalleryAlbum[] = [
   {
     slug: 'community-wellness-festival',
     title: 'Community Wellness Festival',
-    location: 'Mela Ground, Jaipur',
+    location: 'ILBS Hospital, Delhi',
     date: 'May 02, 2026',
     photoCount: 31,
     description:
