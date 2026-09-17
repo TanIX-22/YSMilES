@@ -5,7 +5,7 @@ import { AlbumHeader } from '@/components/gallery/AlbumHeader';
 import { PhotoGrid } from '@/components/gallery/PhotoGrid';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { getAlbumBySlug } from '@/components/gallery/content';
+import { albums, getAlbumBySlug } from '@/components/gallery/content';
 
 interface AlbumPageProps {
   params: Promise<{ album: string }>;
@@ -19,6 +19,10 @@ const navItems = [
   { label: 'OUR WORK', href: '/#programme' },
   { label: 'CONTACT', href: '/contact' },
 ];
+
+export function generateStaticParams() {
+  return albums.map((album) => ({ album: album.slug }));
+}
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
   const { album } = await params;
