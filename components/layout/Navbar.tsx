@@ -68,7 +68,7 @@ export function Navbar({ logo, items }: NavbarProps) {
           </div>
 
           <div className="lg:hidden">
-            <div className="relative flex h-[84px] items-center justify-between gap-3 rounded-[28px] border border-[#dceef4] bg-white px-2 py-2 shadow-[0_14px_30px_rgba(0,58,145,0.08)]">
+            <div className="flex h-[84px] items-center gap-3 rounded-[28px] border border-[#dceef4] bg-white px-2 py-2 shadow-[0_14px_30px_rgba(0,58,145,0.08)]">
               <Link
                 href="/"
                 aria-label="Y-SMILES Home"
@@ -86,7 +86,7 @@ export function Navbar({ logo, items }: NavbarProps) {
                 )}
               </Link>
 
-              <div className="pointer-events-none absolute left-1/2 flex max-w-[calc(100%-10rem)] -translate-x-1/2 justify-center px-2" aria-hidden="true">
+              <div className="flex min-w-0 flex-1 justify-center px-2" aria-hidden="true">
                 <Image
                   src={withBasePath('/logos/ysmiles-wordmark.svg')}
                   alt=""
@@ -96,16 +96,18 @@ export function Navbar({ logo, items }: NavbarProps) {
                 />
               </div>
 
-              <button
-                type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#dceef4] bg-[#f2fbfc] text-[#003a91] transition hover:bg-[#eaf7fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003a91]/20"
-                onClick={() => setMobileOpen(!mobileOpen)}
-                aria-expanded={mobileOpen}
-                aria-controls="mobile-menu"
-                aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-              >
-                {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </button>
+              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-end">
+                <button
+                  type="button"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#dceef4] bg-[#f2fbfc] text-[#003a91] transition hover:bg-[#eaf7fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003a91]/20"
+                  onClick={() => setMobileOpen(!mobileOpen)}
+                  aria-expanded={mobileOpen}
+                  aria-controls="mobile-menu"
+                  aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+                >
+                  {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                </button>
+              </div>
             </div>
           </div>
         </div>
