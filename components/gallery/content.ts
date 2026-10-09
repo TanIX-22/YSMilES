@@ -3,13 +3,17 @@ import explainImage from '@/images/gallery/Explain.jpeg';
 import explain2Image from '@/images/gallery/Explain 2.jpeg';
 import fibroImage from '@/images/gallery/Fibro.png';
 import groupImage from '@/images/gallery/Group.jpeg';
+import naveenPosterImage from '@/images/gallery/Naveen.jpeg';
 import poojaImage from '@/images/gallery/Pooja Maam.jpeg';
 import studentsImage from '@/images/gallery/Students.png';
+import { withBasePath } from '@/lib/paths';
 
 export interface GalleryPhoto {
   src: string;
   alt: string;
   caption?: string;
+  type?: 'image' | 'video';
+  poster?: string;
 }
 
 export interface GalleryAlbum {
@@ -63,7 +67,7 @@ export const albums: GalleryAlbum[] = [
     title: 'Liver Health Awareness Drive',
     location: 'ILBS Community Centre, New Delhi',
     date: 'April 08, 2026',
-    photoCount: 18,
+    photoCount: 4,
     description:
       'A community-facing event that connected families with specialists and practical guidance on early prevention.',
     coverImage: poojaImage.src,
@@ -80,24 +84,18 @@ export const albums: GalleryAlbum[] = [
         caption: 'The awareness drive brought health professionals and community partners together.',
       },
       {
-        src: poojaImage.src,
-        alt: 'Health educators sharing liver health information at an awareness event',
-        caption: 'Visitors received clear information about liver wellness and early prevention.',
+        src: withBasePath('/images/gallery/Naveen%201.mp4'),
+        alt: 'Naveen 1',
+        caption: 'Project coordinator Naveen speaks about the liver health awareness drive in an interview.',
+        type: 'video',
+        poster: naveenPosterImage.src,
       },
       {
-        src: groupImage.src,
-        alt: 'Health professionals and programme participants gathered at an ILBS event',
-        caption: 'Collaboration strengthened the reach of the liver health awareness initiative.',
-      },
-      {
-        src: poojaImage.src,
-        alt: 'Health educators sharing liver health information at an awareness event',
-        caption: 'Every conversation encouraged informed choices and healthier habits.',
-      },
-      {
-        src: groupImage.src,
-        alt: 'Health professionals and programme participants gathered at an ILBS event',
-        caption: 'The event reflected a shared commitment to preventive liver health.',
+        src: withBasePath('/images/gallery/Naveen%202.mp4'),
+        alt: 'Naveen 2',
+        caption: 'Project coordinator Naveen shares his perspective during the interview session.',
+        type: 'video',
+        poster: naveenPosterImage.src,
       },
     ],
   },

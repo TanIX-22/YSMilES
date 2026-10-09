@@ -51,6 +51,7 @@ export function Lightbox({ isOpen, photos, initialIndex, onClose }: LightboxProp
 
   const showPrev = () => setActiveIndex((prev) => (prev - 1 + photos.length) % photos.length);
   const showNext = () => setActiveIndex((prev) => (prev + 1) % photos.length);
+  const isVideo = currentPhoto.type === 'video';
 
   return (
     <div
@@ -95,14 +96,25 @@ export function Lightbox({ isOpen, photos, initialIndex, onClose }: LightboxProp
 
         <div className="min-h-0 flex-1 overflow-hidden bg-neutral-100 p-3 sm:p-5">
           <div className="flex h-full min-h-0 items-center justify-center">
-            <Image
-              src={currentPhoto.src}
-              alt={currentPhoto.alt}
-              width={1400}
-              height={900}
-              className="max-h-[52dvh] max-w-full rounded-[1.2rem] object-contain sm:max-h-full"
-              priority
-            />
+            {isVideo ? (
+              <video
+                src={currentPhoto.src}
+                poster={currentPhoto.poster}
+                controls
+                autoPlay
+                playsInline
+                className="max-h-[52dvh] max-w-full rounded-[1.2rem] object-contain sm:max-h-full"
+              />
+            ) : (
+              <Image
+                src={currentPhoto.src}
+                alt={currentPhoto.alt}
+                width={1400}
+                height={900}
+                className="max-h-[52dvh] max-w-full rounded-[1.2rem] object-contain sm:max-h-full"
+                priority
+              />
+            )}
           </div>
         </div>
 
