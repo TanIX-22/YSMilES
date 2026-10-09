@@ -87,7 +87,7 @@ export const albums: GalleryAlbum[] = [
         alt: 'Project coordinator Naveen in interview 1',
         caption: 'Project coordinator Naveen speaks about the liver health awareness drive in an interview.',
         type: 'video',
-        poster: withBasePath('/images/gallery/naveen-cover-1.png'),
+        poster: withBasePath('/images/gallery/naveen-cover-1-latest.png'),
       },
       {
         src: withBasePath('/images/gallery/Naveen%202.mp4'),
