@@ -28,12 +28,15 @@ export function PhotoGrid({ photos }: PhotoGridProps) {
         ))}
       </div>
 
-      <Lightbox
-        isOpen={selectedIndex !== null}
-        photos={photos}
-        initialIndex={selectedIndex ?? 0}
-        onClose={() => setSelectedIndex(null)}
-      />
+      {selectedIndex !== null && (
+        <Lightbox
+          key={`photo-lightbox-${selectedIndex}`}
+          isOpen={true}
+          photos={photos}
+          initialIndex={selectedIndex}
+          onClose={() => setSelectedIndex(null)}
+        />
+      )}
     </>
   );
 }
