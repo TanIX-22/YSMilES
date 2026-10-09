@@ -43,18 +43,18 @@ export const albums: GalleryAlbum[] = [
       },
       {
         src: explainImage.src,
-        alt: 'Explaining liver health to students',
-        caption: 'Explaining liver health to students',
+        alt: 'Students learning about liver health during the school health camp',
+        caption: 'Students were explained about liver health during the school health camp.',
       },
       {
         src: explain2Image.src,
-        alt: 'Explaining liver health to students',
-        caption: 'Explaining liver health to students',
+        alt: 'Students understanding liver health during the school health camp',
+        caption: 'Students learned about liver health and healthy habits.',
       },
       {
         src: anTogetherImage.src,
         alt: 'Our team receiving the certificate together',
-        caption: 'Our team receiving the certificate together',
+        caption: 'Our team proudly received the certificate together.',
       },
     ],
   },
