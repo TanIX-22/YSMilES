@@ -3,7 +3,6 @@ import explainImage from '@/images/gallery/Explain.jpeg';
 import explain2Image from '@/images/gallery/Explain 2.jpeg';
 import fibroImage from '@/images/gallery/Fibro.png';
 import groupImage from '@/images/gallery/Group.jpeg';
-import naveenPosterImage from '@/images/gallery/Naveen.jpeg';
 import poojaImage from '@/images/gallery/Pooja Maam.jpeg';
 import studentsImage from '@/images/gallery/Students.png';
 import { withBasePath } from '@/lib/paths';
@@ -88,14 +87,14 @@ export const albums: GalleryAlbum[] = [
         alt: 'Naveen 1',
         caption: 'Project coordinator Naveen speaks about the liver health awareness drive in an interview.',
         type: 'video',
-        poster: naveenPosterImage.src,
+        poster: withBasePath('/images/gallery/naveen-cover-1.png'),
       },
       {
         src: withBasePath('/images/gallery/Naveen%202.mp4'),
         alt: 'Naveen 2',
         caption: 'Project coordinator Naveen shares his perspective during the interview session.',
         type: 'video',
-        poster: naveenPosterImage.src,
+        poster: withBasePath('/images/gallery/naveen-cover-2.png'),
       },
     ],
   },
