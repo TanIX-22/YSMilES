@@ -1,3 +1,6 @@
+import anTogetherImage from '@/images/gallery/AN Together.jpeg';
+import explainImage from '@/images/gallery/Explain.jpeg';
+import explain2Image from '@/images/gallery/Explain 2.jpeg';
 import fibroImage from '@/images/gallery/Fibro.png';
 import groupImage from '@/images/gallery/Group.jpeg';
 import poojaImage from '@/images/gallery/Pooja Maam.jpeg';
@@ -27,7 +30,7 @@ export const albums: GalleryAlbum[] = [
     title: 'School Health Camp',
     location: 'Delhi Public School, Noida',
     date: 'March 14, 2026',
-    photoCount: 24,
+    photoCount: 4,
     description:
       'A full-day wellness initiative focused on nutrition, hydration, and preventive health education for students and educators.',
     coverImage: studentsImage.src,
@@ -39,29 +42,19 @@ export const albums: GalleryAlbum[] = [
         caption: 'Students received practical health screenings from medical mentors.',
       },
       {
-        src: studentsImage.src,
-        alt: 'Students proudly holding certificates after a school health programme',
-        caption: 'Students celebrated their participation and learning together.',
+        src: explainImage.src,
+        alt: 'Explain',
+        caption: 'Explain',
       },
       {
-        src: fibroImage.src,
-        alt: 'A student receiving a health screening during a school health camp',
-        caption: 'Health screenings helped make preventive care practical and accessible.',
+        src: explain2Image.src,
+        alt: 'Explain 2',
+        caption: 'Explain 2',
       },
       {
-        src: studentsImage.src,
-        alt: 'Students proudly holding certificates after a school health programme',
-        caption: 'The programme gave students a moment to share their achievement.',
-      },
-      {
-        src: fibroImage.src,
-        alt: 'A student receiving a health screening during a school health camp',
-        caption: 'Medical teams brought careful, student-focused screening to the classroom.',
-      },
-      {
-        src: studentsImage.src,
-        alt: 'Students proudly holding certificates after a school health programme',
-        caption: 'Learning and recognition came together in this school health camp moment.',
+        src: anTogetherImage.src,
+        alt: 'AN Together',
+        caption: 'AN Together',
       },
     ],
   },
