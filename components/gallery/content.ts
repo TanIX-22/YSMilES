@@ -31,7 +31,7 @@ export const albums: GalleryAlbum[] = [
   {
     slug: 'school-health-camp',
     title: 'School Health Camp',
-    location: 'Delhi Public School, Noida',
+    location: 'Jawahar Navodaya Vidyalaya, Delhi',
     date: 'March 14, 2026',
     photoCount: 4,
     description:

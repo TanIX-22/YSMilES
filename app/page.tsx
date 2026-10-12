@@ -426,14 +426,14 @@ export default function HomePage() {
                 achievement: 'Provides clinical and institutional leadership for ILBS and its preventive health education initiatives.',
               },
               {
-                name: 'Dr. B. B. Rewari',
+                name: 'Dr. Bharat Bhushan Rewari',
                 role: 'Head Of Department (Epidemiology)',
                 image: rewariImage,
                 achievement: 'Leads epidemiology expertise that supports evidence-based screening, monitoring, and population health action.',
               },
               {
                 name: 'Dr. Kanica Kaushal',
-                role: 'Principal Investigator (Epidemiology)',
+                role: 'Principal Investigator, Associate Professor (Epidemiology)',
                 image: kanicaImage,
                 achievement: 'Supports programme research and implementation, helping translate health evidence into practical school outreach.',
               },
