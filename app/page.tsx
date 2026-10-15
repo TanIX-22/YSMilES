@@ -6,7 +6,7 @@ import riskScaleImage from '@/images/gallery/Risk Scale.png';
 import peerEducatorImage from '@/images/gallery/Peer to peer.png';
 import schoolVisitsImage from '@/images/gallery/home-banner1.jpg';
 import directorImage from '@/images/leadership/Dr_Sarin.jpg';
-import csrOutreachImage from '@/images/gallery/ILBS & NTPC CSR Outreach.png';
+import csrOutreachImage from '@/images/gallery/ILBS & NTPC Outreach.png';
 import rewariImage from '@/images/leadership/Dr_Rewari.jpeg';
 import kanicaImage from '@/images/leadership/Dr_Kanica.jpg';
 import { Navbar } from '@/components/layout/Navbar';
@@ -167,10 +167,10 @@ export default function HomePage() {
                 alt: 'Peer educator workshop',
               },
               {
-                title: 'ILBS & NTPC CSR Outreach',
+                title: 'ILBS & NTPC Outreach',
                 description: 'Partnership-driven events connect clinical expertise with community action.',
                 src: csrOutreachImage.src,
-                alt: 'ILBS and NTPC CSR outreach',
+                alt: 'ILBS and NTPC outreach',
               },
             ]}
           />
