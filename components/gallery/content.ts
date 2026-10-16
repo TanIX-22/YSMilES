@@ -3,6 +3,7 @@ import explainImage from '@/images/gallery/Explain.jpeg';
 import explain2Image from '@/images/gallery/Explain 2.jpeg';
 import fibroImage from '@/images/gallery/Fibro.png';
 import groupImage from '@/images/gallery/Group.jpeg';
+import oldGroupImage from '@/images/gallery/Old Group.jpeg';
 import poojaImage from '@/images/gallery/Pooja Maam.jpeg';
 import studentsImage from '@/images/gallery/Students.png';
 import { withBasePath } from '@/lib/paths';
@@ -110,9 +111,9 @@ export const albums: GalleryAlbum[] = [
     highlight: 'Community engagement',
     gallery: [
       {
-        src: fibroImage.src,
-        alt: 'A student receiving a health screening at a community wellness event',
-        caption: 'Community wellness begins with accessible, practical health screening.',
+        src: oldGroupImage.src,
+        alt: 'The Epidemiology Department team gathered at the ILBS auditorium',
+        caption: 'The Epidemiology Department team came together at the ILBS auditorium.',
       },
       {
         src: groupImage.src,
